@@ -95,7 +95,7 @@ interface SpriteClip {
 }
 
 interface SpriteClipConstructor {
-	new(): SpriteClip;
+	new (): SpriteClip;
 }
 
 declare const SpriteClip: SpriteClipConstructor;
