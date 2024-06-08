@@ -3,12 +3,12 @@ interface SpriteClip {
 	 * The image object to work on.
 	 * @default undefined
 	 */
-	Adornee: ImageButton | ImageLabel;
+	Adornee?: ImageButton | ImageLabel;
 	/**
 	 * The AssetId of the sprite sheet. Check `InheritSpriteSheet`.
 	 * @default undefined
 	 */
-	SpriteSheet: string;
+	SpriteSheet?: string;
 	/**
 	 * Whether the `SpriteSheet` value will automatically take the `Image` value of a GUI object when the `Adornee` is set.
 	 * @default true
