@@ -1,4 +1,4 @@
-declare interface SpriteClip {
+interface SpriteClip {
 	/**
 	 * The image object to work on.
 	 * @default undefined
