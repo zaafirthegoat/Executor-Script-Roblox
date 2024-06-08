@@ -81,9 +81,9 @@ interface SpriteClip {
 	Stop(): boolean;
 	/**
 	 * Increments the animation by the given number of frames or a single frame
-	 * @param count Number of frames to advance the animation by.
+	 * @param {number} [count=1] Number of frames to advance the animation by. Defaults to 1.
 	 */
-	Advance(count: number): void;
+	Advance(count?: number): void;
 	/**
 	 * Removes the animation from the list and clears its metatable.
 	 */
