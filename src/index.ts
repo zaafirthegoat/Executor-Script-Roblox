@@ -1,1 +1,3 @@
-// this is here to stop error TS18003
+import SpriteClip from "./SpriteClip";
+
+export default SpriteClip;

@@ -28,7 +28,6 @@
 			(<SpriteClip>clone) :Clone()	Desc: Creates a new SpriteClip with the same properties as the original. Doesn't copy Adornee.
 	
 ]]
-local inf = math.huge
 local newVec2 = Vector2.new
 local next = next
 local newproxy = newproxy
@@ -42,7 +41,6 @@ do
 	local sorting = false
 
 	local frame = 0
-	local framediv = 1 / 60
 	game:GetService("RunService").Heartbeat:Connect(function()
 		frame = frame + 1
 		if ClipList[1] then
@@ -97,7 +95,6 @@ do
 		local offx, offy = off.X, off.Y
 		local eoff = self.EdgeOffsetPixel
 		local countx = self.SpriteCountX
-		local count = self.SpriteCount
 		local x = frame % countx
 		local y = (frame - x) / countx
 		x = eoff.X + x * (sizex + offx)
@@ -129,7 +126,7 @@ do
 		local proxy = newproxy(true)
 		local meta = getmetatable(proxy)
 		meta.__index = tab
-		meta.__newindex = function(self, i, v)
+		meta.__newindex = function(_, i, v)
 			tab[i] = v
 			if i == "Adornee" or i == "SpriteSizePixel" then
 				local img = tab.Adornee
@@ -170,7 +167,7 @@ do
 				meta[i] = nil
 			end
 		end
-		tab.Clone = function(self)
+		tab.Clone = function()
 			local new = SpriteClip.new()
 			for i, v in next, tab do
 				if v ~= "Adornee" then
