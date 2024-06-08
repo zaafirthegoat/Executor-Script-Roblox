@@ -118,7 +118,6 @@ do
 			FrameTime = 60 / 15,
 			Looped = true,
 			State = false,
-			Sorted = true,
 		}
 		for i, v in next, methods do
 			tab[i] = v
