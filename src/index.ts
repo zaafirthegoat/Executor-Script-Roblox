@@ -1,3 +1,2 @@
 import SpriteClip from "./SpriteClip";
-
-export default SpriteClip;
+export = SpriteClip;
